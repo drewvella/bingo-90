@@ -34,7 +34,7 @@ A Bingo 90 Strip should follow the following rules:
 All tests can be found in the BingoStripGeneratorTest class. They can be run using `mvn test`
 
 ## Further Information
-This has proven to be quite a challenging task. The main issue is to generate enough working row/column placeholder combinations i.e. having enough column values in every row in every ticket. I think it is almost impossible to have an algorithm fast enough to compute all those combinations while adhering to the set rules so the approach I took for generating large amounts of tickets was split in two:
+This has proven to be quite a challenging task. The main issue is to generate enough working row/column placeholder combinations i.e. having enough column values in every row in every ticket. I think any algorithm will always hit some sort of "collision" when it comes to allocating columns to rows. I also think it is almost impossible to have an algorithm fast enough to compute all those combinations while adhering to the set rules so the approach I took for generating large amounts of tickets was split in two:
 1. Having an algorithm which runs until it can compute a working combination for a Strip (i.e. adhering to all the rules)
 2. The Strip that has been generated has already computed the row/column positions therefore it is then a simple matter of replacing the values for each row column with another value for that column.
 
